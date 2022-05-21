@@ -1,0 +1,82 @@
+#header {
+  background-color: #333;
+  width: 100%;
+  height: 56px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+nav .menuLink {
+  height: 41px;
+  text-align: center;
+  padding-right: 40px;
+  padding-top: 15px;
+}
+
+nav .menuLink a {
+  color: grey;
+  text-decoration: none;
+}
+
+nav .menuLink a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+nav .menuLink a.selected {
+  text-decoration: none;
+  color: white;
+}
+
+nav .menuLink.logo {
+  background-image: url("img/logoWithWolfWhite.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  height: 56px;
+  width: 130px;
+  padding-right: 150px;
+  padding-top: 0px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  height: auto;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/*# sourceMappingURL=Header.css.map */
