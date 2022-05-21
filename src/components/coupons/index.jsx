@@ -1,7 +1,7 @@
 import '../../styles/coupons.css'
 import React from 'react';
 import DataTable from 'react-data-table-component'
-import Modal from '../modal';
+import GenericModal from '../genericModal';
 
 const columns = [
     {
@@ -85,15 +85,16 @@ function Coupons(props){
 
     return (
         <div>
-            <Modal showModal={showModal} toggle={toggle} 
+            <GenericModal showModal={showModal} backdrop="static" toggle={toggle} 
                 title="Créer un bon de réduction" 
                 description="Créez vos propre code de réduction pour offrir des promotions à vos clients">
                     {InitModalContent()}
-            </Modal>
+            </GenericModal>
+
             <h1>Bons de réduction</h1>
             <div className='couponCommands'>
                 <input className='inputFilterCoupon' type="text" onChange={handleSearch} placeholder="Rechercher un bon de réduction..."/>
-                <button className='btnAddCoupon' onClick={e => toggle(!showModal)}>Créer un bon de réduction</button>
+                <button className='btnAddCoupon' onClick={() => toggle(!showModal)}>Créer un bon de réduction</button>
             </div>
             <DataTable columns={columns}
             data={filteredData}></DataTable>
