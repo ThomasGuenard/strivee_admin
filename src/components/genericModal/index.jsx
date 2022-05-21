@@ -1,4 +1,3 @@
-//import '../../styles/modal.css'
 import { Button, Modal } from 'react-bootstrap';
 
 function GenericModal(props){
@@ -6,19 +5,20 @@ function GenericModal(props){
         return null;
     }
     return (
-        <Modal show={props.showModal} onHide={() => props.toggle(false)}>
+      <Modal size="lg" show={props.showModal} onHide={() => props.toggle(false)}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>{props.Title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <p>{props.Description}</p>
           {props.children}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={() => props.toggle(false)}>
-            Close
+            Annuler
           </Button>
           <Button variant="primary" onClick={() => props.toggle(false)}>
-            Save Changes
+            Enregistrer bon de réduction
           </Button>
         </Modal.Footer>
       </Modal>);
