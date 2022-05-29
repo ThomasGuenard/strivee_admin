@@ -33,7 +33,7 @@ nav .menuLink a:hover {
   color: white;
 }
 
-nav .menuLink a.selected {
+nav .menuLink a.active {
   text-decoration: none;
   color: white;
 }
@@ -79,4 +79,4 @@ nav .menuLink.logo {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=header.css.map */
